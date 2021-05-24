@@ -1,0 +1,4 @@
+Create a DB: laravel8
+Import laravel8.sql into DB;
+
+Here we go.....
