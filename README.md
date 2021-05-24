@@ -4,17 +4,17 @@
 
 ## How to Setup
 
-* **First, ** Create a Model & a table. example-  `php artisan make:model Student -mc`
+* **First,** Create a Model & a table. example-  `php artisan make:model Student -mc`
 
-* **Second, ** After Migrating Table Then, Create a Seeder
+* **Second,** After Migrating Table Then, Create a Seeder
 
         php artisan make:seeder StudentSeeder
         
-* **Third, ** Now Create a Factory like, 
+* **Third,** Now Create a Factory like, 
 
         php artisan make:factory StudentFactory
         
-* **Fourth, ** In factory change the `definition` example -
+* **Fourth,** In factory change the `definition` example -
 
         public function definition()
         {
@@ -25,12 +25,12 @@
             ];
         }
  
- * **Fifth , ** Include Model in Seeder `StudentSeeder`
+ * **Fifth,** Include Model in Seeder `StudentSeeder`
         
         use App\Models\Student;
         Student::factory()->count(10)->create();
         
-* **Finally, ** use `call()` in DatabaseSeeder.php
+* **Finally,** use `call()` in DatabaseSeeder.php
 
         $this->call([
             StudentSeeder::class,
